@@ -4,14 +4,18 @@ const app = express();
 const http = require("http").createServer(app);
 const bodyParser = require("body-parser");
 const shopRoutes = require("./routes/shop");
+const adminRoutes = require("./routes/admin");
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-// The shop routes
+// Shop routes
 app.use(shopRoutes);
+
+// Admin routes
+app.use("/admin", adminRoutes);
 
 // Listener
 http.listen(3000, () => {
