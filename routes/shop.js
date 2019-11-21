@@ -9,7 +9,7 @@ const adminData = require("./admin");
 // @access Public
 
 router.get("/", (req, res, next) => {
-  res.render("shop");
+  res.render("shop", { docTitle: "Homepage" });
 });
 
 module.exports = router;
