@@ -6,10 +6,11 @@ const adminData = require("./admin");
 
 // @route GET /
 // @desc Root/homepage that displays lists of products
-// @access Public
+// @access Public!
 
 router.get("/", (req, res, next) => {
-  res.render("shop", { docTitle: "Homepage" });
+  const products = adminData.products;
+  res.render("shop", { prods: products, docTitle: "Homepage" });
 });
 
 module.exports = router;
