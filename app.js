@@ -4,7 +4,7 @@ const app = express();
 const http = require("http").createServer(app);
 
 app.set("view engine", "pug");
-app.set("views", "views");
+app.set("views", "./views");
 
 const bodyParser = require("body-parser");
 const shopRoutes = require("./routes/shop");
