@@ -28,5 +28,5 @@ app.use((req, res, next) => {
 
 // Listener
 http.listen(8080, () => {
-  console.log("Listening on PORT 3000");
+  console.log("Listening on PORT 8080");
 });
